@@ -1,0 +1,26 @@
+{
+  "name": "webinterface",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WeytensThibault/arduinointerface.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/WeytensThibault/arduinointerface/issues"
+  },
+  "homepage": "https://github.com/WeytensThibault/arduinointerface#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "serialport": "^13.0.0"
+  }
+}

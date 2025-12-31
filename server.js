@@ -3,9 +3,8 @@ const { SerialPort } = require("serialport");
 
 const app = express();
 
-// ⚠️ pas dit aan naar jouw poort
 const port = new SerialPort({
-  path: "/dev/cu.usbserial-110", // Mac
+  path: "/dev/cu.usbserial-110",
   baudRate: 9600,
 });
 

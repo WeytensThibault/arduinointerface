@@ -1,0 +1,17 @@
+.c-controller {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c-controller-scroller {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.c-controller-scroller input[type="range"] {
+  flex: 1 1 auto;
+  width: 100%;
+}

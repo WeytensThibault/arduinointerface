@@ -1,6 +1,7 @@
 const express = require("express");
 const { SerialPort } = require("serialport");
 const cors = require("cors");
+const { log } = require("three");
 
 const app = express();
 app.use(cors());
@@ -10,10 +11,15 @@ const port = new SerialPort({
   baudRate: 9600,
 });
 
-app.get("/move/:angle", (req, res) => {
-  const angle = req.params.angle;
+app.get("/move/:command", (req, res) => {
+  const command = req.params.command;
+  // console.log("Ontvangen commando:", req.params.command);
+  let angle;
+
+  angle = parseInt(command); // Direct angle control
+
   port.write(angle + "\n");
-  res.send("OK");
+  res.send(`Command: ${command}, Angle: ${angle}`);
 });
 
 app.listen(3000, () => {

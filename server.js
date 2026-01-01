@@ -1,7 +1,9 @@
 const express = require("express");
 const { SerialPort } = require("serialport");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 
 const port = new SerialPort({
   path: "/dev/cu.usbserial-110",
